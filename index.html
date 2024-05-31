@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord OAuth2 Login</title>
+</head>
+<body>
+    <h1>Discord OAuth2 Login</h1>
+    <a id="login" href="#">Login with Discord</a>
+
+    <script>
+        document.getElementById('login').href = `https://discord.com/api/oauth2/authorize?client_id=1239605071084519434&redirect_uri=${encodeURIComponent('http://localhost:5000/callback')}&response_type=code&scope=identify%20guilds.join`;
+    </script>
+</body>
+</html>
